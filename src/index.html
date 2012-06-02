@@ -6,7 +6,12 @@
 	<title>jQuery Repeated Timer</title>
 
 	<style>
-
+		#timer {
+			width: 400px;
+			height: 400px;
+			margin: auto;
+			font-size: 2000%;
+		}
 	</style>
 	<script>
 
@@ -15,10 +20,13 @@
 <body>
 	<h1>jQuery Repeated Timer</h1>
 
+	<div id="timer">45</div>
+
   <script type="text/javascript" src="js/jquery-1.7.2.min.js"></script>
-  <script type="text/javascript" src="js/TimerRepeater.js"></script>
+  <script type="text/javascript" src="js/Timer.js"></script>
+  <!-- // <script type="text/javascript" src="js/TimerRepeater.js"></script> -->
   <script type="text/javascript">
-  	$("body").timerRepeater();
+  	$("body").timer();
   </script>
 </body>
 </html>

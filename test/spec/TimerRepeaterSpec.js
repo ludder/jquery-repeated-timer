@@ -4,7 +4,6 @@ describe("TimerRepeater", function() {
   beforeEach(function() {
     timerrepeater = $("body").timerRepeater();
     timerrepeater = $.fn.timerRepeater;
-    console.log(timerrepeater);
   });
 
   it("should be able to play a Song", function() {
