@@ -37,13 +37,13 @@
         return;
       }
       if (timing) {
-        Timer.startPause(2);
+        Timer.startPause(5);
       } else {
-        Timer.startTimer(5);
+        Timer.startTimer(10);
       }
     });
 
-    Timer.startTimer(5);
+    Timer.startTimer(10);
   }
 
   Timer.prototype.init = function() {
@@ -72,7 +72,13 @@
       if (counter > 0) {
         $("#timer").html(counter);
         Timer.count();
+        if (pausing && counter < 4) {
+          document.getElementById("pause").play();
+        }
       } else {
+        if (timing) {
+          document.getElementById("end-sound").play();
+        }
         $("body").trigger('counter_down');
       }
     }, 1000);
